@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Silkscreen&display=swap");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 12px;
+  /* background-color: black; */
+  color: white !important;
+  opacity: 1;
+  position: sticky;
+}
+a {
+  color: white;
+  font-weight: 700;
+}
+.logo {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 30px;
+  color: rgb(197, 197, 222);
+}
+.Mid ul {
+  display: flex;
+  justify-content: space-between;
+}
+.Mid ul li {
+  padding: 0px 42px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.manu :hover {
+  color: rgb(160, 160, 168);
+}
+
+.iconsManu {
+  display: flex;
+  font-size: 20px;
+}
+.iconsManu div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.SideBar {
+  font-size: 30px;
+    color: black;
+    background: white;
+    width: 30%;
+    position: fixed;
+    right: 0px;
+    height: 93vh;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    transition: transform 5.3s ease-in-out;
+    overflow: hidden;
+
+}
+.tital{
+    text-align: center;
+}
+.inputName{
+    font-size: 22px;
+    padding: 12px;
+}
+.loginBtn{
+    padding: 20px;
+    background: transparent;
+    width: 48%;
+    border: none;
+    border-bottom: 2px solid;
+    margin: 0px 2px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 0%;
+    align-items: center;
+}
+.close {
+  position: relative;
+  left: 88%;
+  padding: 12px;
+}
+
+.info {
+    /* text-align: center; */
+  /* padding: 12px; */
+  font-weight: 700;
+  align-items: center;
+  /* margin-top: 20%; */
+}
+
+.info h3{
+    margin: 20px 0px;
+}
+.inputSec{
+    margin: 30px 0px;
+}
+.loginInput{
+    width: 100%;
+    padding: 12px;
+    margin: 10px -1px;
+    border: 0px 2px 0px 2px;
+    outline: none;
+    font-size: 22px;
+}
+.send{
+    margin: 12px;
+    backface-visibility: hidden;
+  background: rgb(134, 239, 172);
+  border: 0;
+  border-radius: 2.375rem;
+  box-sizing: border-box;
+  color: #110101;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.loginForm{
+    margin-top: 10px;
+}
