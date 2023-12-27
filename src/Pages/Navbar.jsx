@@ -29,7 +29,7 @@ function Navbar() {
       <nav>
         <div className="Left">
           <Link to={"/"}>
-            <h1 className="logo">Crazy</h1>
+            <h1 className="logo">Go Crazy</h1>
           </Link>
         </div>
         <div className="Mid">
