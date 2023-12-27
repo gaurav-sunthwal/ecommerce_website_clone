@@ -6,7 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState } from "react";
 function Navbar() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [inputFormType, setinputFormType] = useState(true);
   const [inputValue, setInputValue] = useState(true);
 
