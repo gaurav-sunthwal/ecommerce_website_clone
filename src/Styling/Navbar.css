@@ -9,6 +9,7 @@ nav {
   color: white !important;
   opacity: 1;
   position: sticky;
+  z-index: 200;
 }
 a {
   color: white;
@@ -54,6 +55,7 @@ a {
     transition: transform 5.3s ease-in-out;
     overflow: hidden;
     display: none;
+    z-index: 1000;
 
 }
 .tital{
