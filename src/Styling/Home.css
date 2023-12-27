@@ -6,7 +6,7 @@
 }
 
 
-@media screen and (max-width: 366px) {
+@media screen and (max-width: 536px) {
     .slider{
         display: none;
     }
