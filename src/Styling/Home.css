@@ -1,0 +1,16 @@
+.mobileSlider{
+    display: none;
+}
+.mobileSlider img{
+    height: 80vh;
+}
+
+
+@media screen and (max-width: 366px) {
+    .slider{
+        display: none;
+    }
+  .mobileSlider {
+    display: block;
+  }
+}
