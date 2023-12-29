@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    overflow: auto;
+    overflow-x: auto;
 }
 .item{
     padding: 22px;
