@@ -4,6 +4,7 @@ import { useState } from "react";
 import Home from "./Pages/Home";
 import "./Styling/Genural.css";
 import Navbar from "./Pages/Navbar";
+import Products from "./Pages/Products";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -14,6 +15,7 @@ function App() {
         {/* <Navbar/> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Products" element={<Products />} />
         </Routes>
       </Router>
     </>

@@ -4,12 +4,25 @@ import { LuSearch } from "react-icons/lu";
 import { BsHandbag } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import { useState } from "react";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  Input,
+} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import React, { useState } from "react";
 function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [inputFormType, setinputFormType] = useState(true);
   const [inputValue, setInputValue] = useState(true);
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   function toggleItsVisiblity() {
     setIsVisible(!isVisible);
   }
@@ -18,8 +31,8 @@ function Navbar() {
     setInputValue(event.target.value);
   };
   function submitForm() {
-//    alert("Welcome Back!")
-   alert(`Input value is: ${inputValue}`);
+    //    alert("Welcome Back!")
+    alert(`Input value is: ${inputValue}`);
   }
   function inputType() {
     setinputFormType(!inputFormType);
@@ -53,91 +66,84 @@ function Navbar() {
             <div className="search">
               <LuSearch />
             </div>
-            <div className="bag">
-              <BsHandbag />
+            <div className="bag" ref={btnRef} onClick={onOpen}>
+              <BsHandbag
+                ref={btnRef}
+                background={"transparent"}
+                color={"white"}
+                onClick={onOpen}
+              />
+              <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+              >
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton />
+                  <DrawerHeader>Create your account</DrawerHeader>
+
+                  <DrawerBody>
+                    <Input placeholder="Type here..." />
+                  </DrawerBody>
+
+                  <DrawerFooter>
+                    <Button variant="outline" mr={3} onClick={onClose}>
+                      Cancel
+                    </Button>
+                    <Button colorScheme="blue">Save</Button>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
             </div>
-            <div className="userLogin" onClick={toggleItsVisiblity}>
-              <FaRegUser />
+            <div className="userLogin">
+            <FaRegUser
+                ref={btnRef}
+                background={"transparent"}
+                color={"white"}
+                onClick={onOpen}
+              />
+              <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+              >
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton />
+                  <DrawerHeader>Create your account</DrawerHeader>
+
+                  <DrawerBody>
+                    <Input placeholder="Type here..." />
+                  </DrawerBody>
+
+                  <DrawerFooter>
+                    <Button variant="outline" mr={3} onClick={onClose}>
+                      Cancel
+                    </Button>
+                    <Button colorScheme="blue">Save</Button>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
             </div>
           </div>
         </div>
       </nav>
+      <SideBar />
       <div
         className="SideBar"
         style={{ display: isVisible ? "block" : "none" }}
-      >
-        <div
-          className="SideBar userLogin"
-          style={{ display: isVisible ? "block" : "none" }}
-        >
-          <div className="close" onClick={toggleItsVisiblity}>
-            <IoCloseSharp />
-          </div>
-          <hr />
-          <div className="info">
-            <div className="tital">
-              <h2>
-                WelCome To <span className="logo">CRAZY</span>
-              </h2>
-            </div>
-            <div className="loginForm">
-              <div className="typeOfButton">
-                <button className="loginBtn phoneBtn" onClick={inputType}>
-                  Phone Number
-                </button>
-                <button className="loginBtn emailBtn" onClick={inputType}>
-                  Email Id
-                </button>
-              </div>
-              <div
-                className="mobileNumber"
-                style={{ display: inputFormType ? "none" : "block" }}
-              >
-                <div className="phoneNumberInput inputSec">
-                  <p htmlFor="loginInput" className="inputName">
-                    Phone Number
-                  </p>
-                  <input
-                    type="tel"
-                    className="loginInput"
-                    placeholder="Phone Number"
-                    onChange={handleInputChange} 
-                    value={inputValue}
-                  />
-                  <button className="send">Send OTP</button>
-                </div>
-              </div>
-              <div
-                className="emailId"
-                style={{ display: inputFormType ? "block" : "none" }}
-              >
-                <p htmlFor="loginInput" className="inputName">
-                  Email Id & Password
-                </p>
-                <form>
-                  <input
-                    type="email"
-                    className="loginInput"
-                    placeholder="Enter Email ID"
-                  />
-                  <input
-                    type="password"
-                    className="loginInput"
-                    placeholder="Enter Password"
-                  />
-                    <button className="send" type="submit" onClick={submitForm}>Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      ></div>
     </>
   );
 }
 
 export default Navbar;
 
-function SideBar(props) {
+function SideBar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   return <></>;
 }

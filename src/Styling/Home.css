@@ -4,8 +4,43 @@
 .mobileSlider img{
     height: 80vh;
 }
+.allproduct{
+    display: flex;
+    overflow: auto;
+   
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+}
+.box{
+    width: auto;
+    height: 400px;
+    background: rgb(225, 217, 217);
+    margin: 12px;
+    align-items: center;
+}
+.box img{
+    width: 100%;
+    mix-blend-mode:color-burn;
+    /* object-fit: cover; */
+    aspect-ratio:inherit;
+    display: block;
+    margin: auto;
+    padding: 12px;
+}
 
-
+.info{
+    margin: 12px;
+}
+.allItemCollection{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    overflow: auto;
+}
+.item{
+    padding: 12px;
+}
 @media screen and (max-width: 536px) {
     .slider{
         display: none;
