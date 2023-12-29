@@ -34,17 +34,22 @@
 }
 .allItemCollection{
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: center; */
     text-align: center;
-    overflow-x: auto;
+    overflow: auto;
+    position: absolute;
+    left: 9%;
 }
 .item{
     padding: 22px;
+    align-items: center;
 
 }
 .item img{
     display: block;
     margin: auto;
+    object-fit: cover;
+
 }
 .item .name{
     padding: 12px;
@@ -55,5 +60,10 @@
     }
   .mobileSlider {
     display: block;
+  }
+  .allItemCollection{
+    /* justify-content: none; */
+    position: relative;
+    left: 0%;
   }
 }
