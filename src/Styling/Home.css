@@ -39,6 +39,14 @@
     overflow: auto;
 }
 .item{
+    padding: 22px;
+
+}
+.item img{
+    display: block;
+    margin: auto;
+}
+.item .name{
     padding: 12px;
 }
 @media screen and (max-width: 536px) {
