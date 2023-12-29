@@ -34,11 +34,9 @@
 }
 .allItemCollection{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     text-align: center;
     overflow: auto;
-    position: absolute;
-    left: 9%;
 }
 .item{
     padding: 22px;
@@ -49,7 +47,7 @@
     display: block;
     margin: auto;
     object-fit: cover;
-
+    width: 80px;
 }
 .item .name{
     padding: 12px;
@@ -61,9 +59,15 @@
   .mobileSlider {
     display: block;
   }
-  .allItemCollection{
-    /* justify-content: none; */
-    position: relative;
-    left: 0%;
-  }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .allItemCollection{
+        /* justify-content: none; */
+        justify-content: normal;
+        /* position: relative;
+        left: 0%; */
+      }
 }
