@@ -5,22 +5,21 @@
     height: 80vh;
 }
 .allproduct{
-    display: flex;
-    overflow: auto;
-   
     /* display: flex;
+    overflow: auto; */
+   
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 .box{
-    width: auto;
-    height: 400px;
+    width: 400px;
     background: rgb(225, 217, 217);
     margin: 12px;
     align-items: center;
 }
 .box img{
-    width: 100%;
+    width: 30%;
     mix-blend-mode:color-burn;
     /* object-fit: cover; */
     aspect-ratio:inherit;
